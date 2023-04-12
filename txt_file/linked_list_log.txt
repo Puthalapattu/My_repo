@@ -1,0 +1,126 @@
+##################################################################################################################################################
+
+DATA ENTERED INTO THIS FILE @  2023-04-08 @ TIME  22:25:54
+
+-- DELETE OPERATION 1 --
+                TIME WHEN DELETE OPERATION PERFORMED :  22:26:16
+                DATA ##- 30 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At End -##
+                SLL BEFORE DELETING DATA :  [23, 45, 6, 7, 6, 23, 4, 253, 9, 30]
+
+-- DELETE OPERATION 2 --
+                TIME WHEN DELETE OPERATION PERFORMED :  22:26:17
+                DATA ##- 23 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Front -##
+                SLL BEFORE DELETING DATA :  [23, 45, 6, 7, 6, 23, 4, 253, 9]
+
+-- DELETE OPERATION 3 --
+                TIME WHEN DELETE OPERATION PERFORMED :  22:26:19
+                DATA ##- 6 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Position -##
+                SLL BEFORE DELETING DATA :  [45, 6, 7, 6, 23, 4, 253, 9]
+
+-- DELETE OPERATION 4 --
+                TIME WHEN DELETE OPERATION PERFORMED :  22:26:20
+                DATA ##- 9 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At End -##
+                SLL BEFORE DELETING DATA :  [45, 6, 7, 23, 4, 253, 9]
+
+-- DELETE OPERATION 5 --
+                TIME WHEN DELETE OPERATION PERFORMED :  22:26:22
+                DATA ##- 45 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Front -##
+                SLL BEFORE DELETING DATA :  [45, 6, 7, 23, 4, 253]
+
+- LINKED LIST STATUS WHEN USER SELECTED EXIT OPTION -
+
+                TIME :  22:26:29
+                LINKED LIST BEFORE SELECTING EXIT OPTION :  [342, 23, 6, 7, 23, 4, 253, 34]
+
+                TOTAL DELETE OPERATIONS PERFORMED :  5
+                MAX LENGTH OF SLL CREATED TODAY :  10
+
+##################################################################################################################################################
+
+DATA ENTERED INTO THIS FILE @ DATE  2023-04-09 @ TIME  09:42:27
+
+-- DELETE OPERATION 1 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:43:19
+                DATA ##- 5 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At End -##
+                SLL BEFORE DELETING DATA :  [23, 23, 367, 3, 4, 1, 2, 3, 4, 5, 6, 7, 8, 3423876437634, 498, 39, 6, 27, 1, 4, 2, 3, 74, 5]
+
+-- DELETE OPERATION 2 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:43:20
+                DATA ##- 23 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Front -##
+                SLL BEFORE DELETING DATA :  [23, 23, 367, 3, 4, 1, 2, 3, 4, 5, 6, 7, 8, 3423876437634, 498, 39, 6, 27, 1, 4, 2, 3, 74]
+
+-- DELETE OPERATION 3 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:43:27
+                DATA ##- 3 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Position -##
+                SLL BEFORE DELETING DATA :  [23, 367, 3, 4, 1, 2, 3, 4, 5, 6, 7, 8, 3423876437634, 498, 39, 6, 27, 1, 4, 2, 3, 74]
+
+-- DELETE OPERATION 4 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:43:30
+                DATA ##- 74 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At End -##
+                SLL BEFORE DELETING DATA :  [23, 367, 3, 4, 1, 2, 4, 5, 6, 7, 8, 3423876437634, 498, 39, 6, 27, 1, 4, 2, 3, 74]
+
+-- DELETE OPERATION 5 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:43:31
+                DATA ##- 23 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Front -##
+                SLL BEFORE DELETING DATA :  [23, 367, 3, 4, 1, 2, 4, 5, 6, 7, 8, 3423876437634, 498, 39, 6, 27, 1, 4, 2, 3]
+
+-- DELETE OPERATION 6 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:45:06
+                DATA ##- 3423876437634 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Position -##
+                SLL BEFORE DELETING DATA :  [367, 3, 4, 1, 2, 4, 5, 6, 7, 8, 3423876437634, 498, 39, 6, 27, 1, 4, 2, 3]
+
+-- USER REQUESTED LOG --
+                LINKED LIST WHEN THIS OPTION SELECTED :  [4376, 376, 367, 3, 4, 1, 2, 4, 5, 6, 7, 8, 498, 39, 6, 27, 1, 4, 2, 3, 5673]
+
+                TIME WHEN USER REQUESTED FOR A LOG TO SAVE :  09:45:55 
+
+-- DELETE OPERATION 7 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:46:21
+                DATA ##- 5673 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At End -##
+                SLL BEFORE DELETING DATA :  [4376, 376, 367, 3, 4, 1, 2, 4, 5, 6, 7, 8, 498, 39, 6, 27, 1, 4, 2, 3, 5673]
+
+-- DELETE OPERATION 8 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:46:27
+                DATA ##- 4376 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Front -##
+                SLL BEFORE DELETING DATA :  [4376, 376, 367, 3, 4, 1, 2, 4, 5, 6, 7, 8, 498, 39, 6, 27, 1, 4, 2, 3]
+
+-- DELETE OPERATION 9 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:46:32
+                DATA ##- 4 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Position -##
+                SLL BEFORE DELETING DATA :  [376, 367, 3, 4, 1, 2, 4, 5, 6, 7, 8, 498, 39, 6, 27, 1, 4, 2, 3]
+
+-- DELETE OPERATION 10 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:46:34
+                DATA ##- 3 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At End -##
+                SLL BEFORE DELETING DATA :  [376, 367, 3, 1, 2, 4, 5, 6, 7, 8, 498, 39, 6, 27, 1, 4, 2, 3]
+
+-- DELETE OPERATION 11 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:46:48
+                DATA ##- 376 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Front -##
+                SLL BEFORE DELETING DATA :  [376, 367, 3, 1, 2, 4, 5, 6, 7, 8, 498, 39, 6, 27, 1, 4, 2, 34]
+
+-- DELETE OPERATION 12 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:46:49
+                DATA ##- 34 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At End -##
+                SLL BEFORE DELETING DATA :  [367, 3, 1, 2, 4, 5, 6, 7, 8, 498, 39, 6, 27, 1, 4, 2, 34]
+
+-- DELETE OPERATION 13 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:46:50
+                DATA ##- 367 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Front -##
+                SLL BEFORE DELETING DATA :  [367, 3, 1, 2, 4, 5, 6, 7, 8, 498, 39, 6, 27, 1, 4, 2]
+
+-- DELETE OPERATION 14 --
+                TIME WHEN DELETE OPERATION PERFORMED :  09:46:50
+                DATA ##- 2 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At End -##
+                SLL BEFORE DELETING DATA :  [3, 1, 2, 4, 5, 6, 7, 8, 498, 39, 6, 27, 1, 4, 2]
+
+- LINKED LIST STATUS WHEN USER SELECTED EXIT OPTION -
+
+                TIME :  09:46:56
+                LINKED LIST BEFORE SELECTING EXIT OPTION :  [3, 1, 2, 4, 5, 6, 7, 8, 498, 39, 6, 27, 1, 4]
+
+                TOTAL DELETE OPERATIONS PERFORMED :  14
+                MAX LENGTH OF SLL CREATED TODAY :  24
+
+##################################################################################################################################################
+
