@@ -343,8 +343,8 @@ class SLL:
                 if user_requested_log:
                     # if user requests any log to save then we write this data into the file linked_list_log.txt
                     file_object.write(
-                        '-- USER REQUESTED LOG --\n\
-                LINKED LIST WHEN THIS OPTION SELECTED : \33 {linked_list_now}\n\n\
+                        '\33-- USER REQUESTED LOG --\33\n\
+                LINKED LIST WHEN USER REQUESTED FOR LOG : \33 {linked_list_now}\n\n\
                 TIME WHEN USER REQUESTED FOR A LOG TO SAVE : \33 {time} \n\n'.format(linked_list_now = linked_list, time = str(datetime.now())[11:19])
                     )
             # ------------ TASK1 ENDS ----------------------------------------#
