@@ -10,7 +10,7 @@ from datetime import datetime, date
 ####################
 
 class Node:
-    # Initializing contructor
+    # Initializing constructor
     def __init__(self, data:int):
         self.data = data
         self.next = None
@@ -22,12 +22,11 @@ class SLL:
     __deleted_calls = 0
     __original_time = str(datetime.now())[11:19]
 
-    # Initializing contructor 
+    # Initializing constructor 
     def __init__(self) -> None:
         self.head = self.tail = Node(None)
 
     # Method to add an item to Linked List at front everytime when it is called
-
     def insertAtFront(self, data:int) -> None:
         newnode = Node(data)
         # Check if the linked list is empty or not
@@ -35,19 +34,18 @@ class SLL:
             self.head = self.tail = newnode
             print('\nAn empty head is created with data: ',data,'\n')
             
-            # UPDATING SIZE OF SLL LIST EVRY TIME A NEW DTATA ADDED
+            # UPDATING SIZE OF SLL LIST EVRY TIME A NEW ITEM ADDED
 
             SLL.__size_of_sll.append(self.length())
 
-            #-----------------------------------------------------
-
+            # only if there is some data in linked list----------------
         else:
             current = self.head
             self.head = newnode
             newnode.next = current
             print('\nNewNode',newnode.data,'connected to:',current.data,'\n')
             
-            # UPDATING SIZE OF SLL LIST EVRY TIME A NEW DTATA ADDED
+            # UPDATING SIZE OF SLL LIST EVRY TIME A NEW ITEM ADDED
 
             SLL.__size_of_sll.append(self.length())
 
@@ -69,7 +67,7 @@ class SLL:
             self.head = self.tail = newnode
             print('\nAn empty head is creted with data ',self.head.data,'\n')
 
-            # UPDATING SIZE OF SLL LIST EVRY TIME A NEW DTATA ADDED
+            # UPDATING SIZE OF SLL LIST EVRY TIME A NEW ITEM ADDED
 
             SLL.__size_of_sll.append(self.length())
 
@@ -81,7 +79,7 @@ class SLL:
             self.tail = newnode
             print('\nNewNode',newnode.data,'connected to: ',current.data,'\n')
 
-            # UPDATING SIZE OF SLL LIST EVRY TIME A NEW DTATA ADDED
+            # UPDATING SIZE OF SLL LIST EVRY TIME A NEW ITEM ADDED
 
             SLL.__size_of_sll.append(self.length())
 
@@ -118,7 +116,7 @@ class SLL:
                 newnode.next = current.next
                 current.next = newnode
 
-                # UPDATING SIZE OF SLL LIST EVRY TIME A NEW DTATA ADDED
+            # UPDATING SIZE OF SLL LIST EVRY TIME A NEW ITEM ADDED
 
                 SLL.__size_of_sll.append(self.length())
 
@@ -313,9 +311,9 @@ class SLL:
     def create_log(self, exit_selected:bool = False, deleted_data:any = None, delete_type:str = None, linked_list:list = None, user_requested_log = False) -> None:
         if os.path.exists('txt_files\\linked_list_log.txt'):
             # ------------ TASK1 : (REPEATED TASK for every delete operation) ---------------------------#
-            # creating a new file if not exist in present working directory
+             # creating a new file if not exist in present working directory
 
-            # opening the Linked_List_file in append mode as a file_object
+             # opening the Linked_List_file in append mode as a file_object
             with open('txt_files\\linked_list_log.txt', 'a') as file_object:
                 today_date = date.today()
 
@@ -324,7 +322,7 @@ class SLL:
                     file_object.write('DATA ENTERED INTO THIS FILE @ DATE \33 {present_date} @ TIME \33 {time_today}\n\n'.format(present_date = today_date, time_today = SLL.__original_time))
 
                 if deleted_data != None:
-                    # incrimenting __deleted_calls variable of class SLL for every delete operation
+                    # incrimenting  "__deleted_calls"  variable of class SLL for every delete operation performed
                     SLL.__deleted_calls += 1
 
                     # writing the data to the log file for a delete operation into the file linked_list_log.txt
@@ -332,7 +330,7 @@ class SLL:
                         '-- DELETE OPERATION {delete_call} --\n\
                 TIME WHEN DELETE OPERATION PERFORMED : \33 {time}\n\
                 DATA ##-\33 {deleted_data_now} \33-## DELETED FROM SLL WITH DELETE TYPE ##-\33 {deleted_type_now} \33-##\n\
-                SLL BEFORE DELETING DATA : \33 {linked_list_now}\n\n'.format(delete_call = SLL.__deleted_count, time = str(datetime.now())[11:19], deleted_data_now = deleted_data, deleted_type_now = delete_type, linked_list_now = linked_list)
+                SLL BEFORE DELETING DATA : \33 {linked_list_now}\n\n'.format(delete_call = SLL.__deleted_calls, time = str(datetime.now())[11:19], deleted_data_now = deleted_data, deleted_type_now = delete_type, linked_list_now = linked_list)
                         )
                     
                 if SLL.__deleted_calls == 0: 
@@ -341,10 +339,6 @@ class SLL:
                         'Entry @ \33 {today_date} @ TIME \33 {today_time}\n\
                 NO DELETE OPERATIONs IS PERFORMED\n\n'.format(today_date = today_date, today_time = str(datetime.now())[11:19])
                     )
-
-            # ------------ TASK1 ENDS ----------------------------------------#
-
-            # ------------ TASK2 STARTS ( when user selected exit option this will run ) ----------------------------------------#
                 
                 if user_requested_log:
                     # if user requests any log to save then we write this data into the file linked_list_log.txt
@@ -353,7 +347,9 @@ class SLL:
                 LINKED LIST WHEN THIS OPTION SELECTED : \33 {linked_list_now}\n\n\
                 TIME WHEN USER REQUESTED FOR A LOG TO SAVE : \33 {time} \n\n'.format(linked_list_now = linked_list, time = str(datetime.now())[11:19])
                     )
+            # ------------ TASK1 ENDS ----------------------------------------#
 
+            # ------------ TASK2 STARTS ( when user selected exit option this will run ) ----------------------------------------#
                 if exit_selected:
                     # whenever user selects the exit option(choice) then we write the finalized below data into the file linked_list_log.txt  
                     file_object.write(
