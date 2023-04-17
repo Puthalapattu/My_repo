@@ -1,5 +1,5 @@
 '''
-# check the txt_files\Linked_List_Log.txt file for a log saving format in txt_files directory 
+# check the Log_files\Linked_List_Log.txt file for a log saving format in Log_files directory 
 '''
 
 # -----imports------
@@ -309,12 +309,12 @@ class SLL:
  # ----------- creating a log for linked list -------------------------------------------------#
  
     def create_log(self, exit_selected:bool = False, deleted_data:any = None, delete_type:str = None, linked_list:list = None, user_requested_log = False) -> None:
-        if os.path.exists('txt_files\\linked_list_log.txt'):
+        if os.path.exists('Log_files\\linked_list_log.txt'):
             # ------------ TASK1 : (REPEATED TASK for every delete operation) ---------------------------#
              # creating a new file if not exist in present working directory
 
              # opening the Linked_List_file in append mode as a file_object
-            with open('txt_files\\linked_list_log.txt', 'a') as file_object:
+            with open('Log_files\\linked_list_log.txt', 'a') as file_object:
                 today_date = date.today()
 
                 if not SLL.__deleted_calls:
@@ -485,6 +485,7 @@ while True:
     
     elif ch == 15:
         if c.isEmpty():
+            print('Linked list is empty at present!\n')
             continue
         else:
             linked_list_now = c.slltolist()
