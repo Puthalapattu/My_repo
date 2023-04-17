@@ -1,5 +1,5 @@
 '''
-# check the Log_files\Linked_List_Log.txt file for a log saving format in Log_files directory 
+# check the Log_files\Linked_List_Log.txt file for a log saving, format which is in in Log_files directory 
 '''
 
 # -----imports------
