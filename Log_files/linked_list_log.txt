@@ -124,3 +124,35 @@ DATA ENTERED INTO THIS FILE @ DATE  2023-04-09 @ TIME  09:42:27
 
 ##################################################################################################################################################
 
+DATA ENTERED INTO THIS FILE @ DATE  2023-05-21 @ TIME  15:06:18
+
+-- DELETE OPERATION 1 --
+                TIME WHEN DELETE OPERATION PERFORMED :  15:07:56
+                DATA ##- 94 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At End -##
+                SLL BEFORE DELETING DATA :  [24, 287, 38, 49, 375, 7, 3746, 18, 374, 94]
+
+-- DELETE OPERATION 2 --
+                TIME WHEN DELETE OPERATION PERFORMED :  15:08:50
+                DATA ##- 24 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Front -##
+                SLL BEFORE DELETING DATA :  [24, 287, 38, 49, 375, 7, 3746, 18, 374]
+
+-- USER REQUESTED LOG --
+                LINKED LIST WHEN USER REQUESTED FOR LOG :  [287, 38, 49, 375, 7, 3746, 18, 374]
+
+                TIME WHEN USER REQUESTED FOR A LOG TO SAVE :  15:12:24 
+
+-- DELETE OPERATION 3 --
+                TIME WHEN DELETE OPERATION PERFORMED :  15:17:22
+                DATA ##- 375 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Position -##
+                SLL BEFORE DELETING DATA :  [287, 38, 49, 375, 7, 3746, 18, 374]
+
+- LINKED LIST STATUS WHEN USER SELECTED EXIT OPTION -
+
+                TIME :  15:17:27
+                LINKED LIST BEFORE SELECTING EXIT OPTION :  [287, 38, 49, 7, 3746, 18, 374]
+
+                TOTAL DELETE OPERATIONS PERFORMED :  3
+                MAX LENGTH OF SLL CREATED TODAY :  10
+
+##################################################################################################################################################
+

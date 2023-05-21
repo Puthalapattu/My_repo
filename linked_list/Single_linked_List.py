@@ -1,5 +1,5 @@
 """
-# check the Log_files\Linked_List_Log.txt file for a log saving format, which is in in Log_files directory 
+# check the Log_files\Linked_List_Log.txt file for a log saving format
 """
 
 # -----imports------
@@ -54,7 +54,7 @@ class SLL:
             # -----------------------------------------------------
 
     # Method to check if the linked list is empty or not
-    def isEmpty(self) -> bool:
+    def check_sll(self) -> bool:
         if self.head.data is None:
             return True
         else:
@@ -246,7 +246,7 @@ class SLL:
 
     # Method to get the item value with the help of position
     def getvalue(self, position: int) -> int:
-        if self.isEmpty():
+        if self.check_sll():
             print("\nSLL is empty\n")
         elif position < self.length():
             current = self.head
@@ -297,7 +297,7 @@ class SLL:
 
     # Method to get the position of the linked list item or element with the help of item value (data part of a Node in linked list) of linked list
     def getPosition(self, item: int) -> int or bool:
-        if self.isEmpty() is not True and item in self.slltolist():
+        if self.check_sll() is not True and item in self.slltolist():
             count = 1
             current = self.head
             while current.next is not None:
@@ -389,6 +389,7 @@ class SLL:
                             ),
                         )
                     )
+                    # Add a seperator so that we can easily separate logs from each other
                     file_object.write(
                         "##################################################################################################################################################\n\n"
                     )
@@ -396,9 +397,9 @@ class SLL:
             # ------------ TASK2 ENDS ----------------------------------------#
 
 
-# ----------- creating a logs for linked list --------------------------------------------------#
+# ----------- creating a logs for linked list ends --------------------------------#
 
-# -------------------------------------------------------------Drive code---------------------------------------------------------------------------------------------------------------#
+############################# DRIVE CODE STARTS ####################################
 
 c = SLL()
 
@@ -406,7 +407,7 @@ while True:
     print(
         "choices are: \n\n 1--> insert At Front\n 2--> Insert At End\n 3--> Display\n 4--> insert at position\
         \n 5--> Delete node at end\n 6--> Delete node at front\n 7--> Delete with position\n 8--> Convert list to SLL\n 9--> Convert SLL to list\n10--> Get value with popsition\
-        \n11--> get Position of element with value\n12--> Length of SLL\n13--> Get The Head and Tail of SLL\n14--> is Empty\n15--> Create A LOG manually(present sll is moved to log)\n16--> Exit\n"
+        \n11--> get Position of element with value\n12--> Length of SLL\n13--> Get The Head and Tail of SLL\n14--> is Empty\n15--> Create A LOG manually (current SLL will be saved)\n16--> Exit\n"
     )
     try:
         ch = int(input("Enter your choice: "))
@@ -474,7 +475,7 @@ while True:
             print("\noops!, Sorry at present only integer's are allowed\n")
 
     elif ch == 9:
-        if c.isEmpty() is not True:
+        if c.check_sll() is not True:
             print("\nConvertion of SLL to list is successfull!", c.slltolist(), "\n")
         else:
             print("\nSLL is empty!\n")
@@ -496,7 +497,7 @@ while True:
             )
 
     elif ch == 11:
-        if c.isEmpty() is not True:
+        if c.check_sll() is not True:
             try:
                 item = int(input("\nEnter the SLL element to get position: "))
             except:
@@ -505,29 +506,29 @@ while True:
             if c.getPosition(item):
                 print("\n", item, "found at position", c.getPosition(item), "\n")
             else:
-                print(item, "not found in SLL\n")
+                print(item, "not found in SLL.\n")
         else:
             print("\nSLL is empty!\n")
 
     elif ch == 12:
-        if c.isEmpty():
+        if c.check_sll():
             print("\nSLL is empty!\n")
         else:
             print("\nlength of SLL is :", c.length(), "\n")
 
     elif ch == 13:
-        if c.isEmpty():
+        if c.check_sll():
             print("\nSLL is empty\n")
         print("\n(Head, Tail) =", c.gethead_and_tail(), "\n")
 
     elif ch == 14:
-        if c.isEmpty():
-            print("\n", c.isEmpty(), ",Linked list is empty\n")
+        if c.check_sll():
+            print("\nLinked list is empty.\n")
         else:
-            print("\n", c.isEmpty(), ",Linked list is not empty\n")
+            print("\nLinked list is not empty.\n")
 
     elif ch == 15:
-        if c.isEmpty():
+        if c.check_sll():
             print("Linked list is empty at present!\n")
             continue
         else:
@@ -537,6 +538,7 @@ while True:
                 linked_list=linked_list_now,
                 user_requested_log=True,
             )
+            print("User requested log created!\n")
 
     elif ch == 16:
         linked_list = c.slltolist()
@@ -545,7 +547,7 @@ while True:
     else:
         print("\ninvalid choice!\n")
 
-################################################################## DRIVE CODE ENDS ##############################################################################
+############################# DRIVE CODE ENDS ####################################
 
 # --------------- NEW VERSION WITH LOGS OF DATA WE STORE---------------------#
 
@@ -571,8 +573,8 @@ for the FOLLOWING content we are going to create a fun :- def create_log() WITH 
 #### To do all these we have to maintain some values of sll
      we are going to introduce some new variables in sll class
   --
-    __size_of_sll : one list to keep track of size of sll
-    __delete_count : one int variable to count how many delete operations perfoemed 
+    __size_of_sll : list to keep track of size of sll
+    __delete_count : to count how many delete operations perfoemed 
     __deleted_calls : to know how many time create_log() method called
     __original_time : to know when the program is started
   --
@@ -610,94 +612,6 @@ for the FOLLOWING content we are going to create a fun :- def create_log() WITH 
               -- Total deletete operations performed -- 
               -- MAX SIZE OF LINKED LIST CREATED --
     ---task2 ends
-
-  
-  #--following code inside the create_log method
-
-def create_log(self):
-  
-    #---- task1: (Repeated task for every delete operation) ---
-
-    # print present date #########
-
-    from datetime import date
-    with open('linked_list_log.txt', 'a'):
-    print('# --log created at ',date.today(),'--\n')
-
-    #############################
-
-    from datetime import date
-    from datetime import datetime
-
-    #print today date
-    print(date.today(),'\n')
-    #print current time
-    time = str(datetime.now())
-    print(time[11:19])
-
-    #print the data deleted from sll
-
-    #print the sll brfore deleting the data
-
-    if no delete operations are performed then:
-      say : NO DELETE OPERATIONS PERFORMED
-
-    #---- task1 ends -------------------------------------------
-
-    #---- task2 starts (get write into file only after selecting exit option) -------------------------------------------
-
-    LINKED LIST STATUS WHEN USER SELECTED EXIT OPTION:
-
-    # print the linked list
-
-    # print total number of delete operations performed
-
-    # print max size of linked list created
-
-
-    #---- task2 ends -----------------------------------------------------------------------------------------------------
-
-
-    #~~~~~~~~ TO CREATE A NEW FILE ~~~~~~~~~~
-
-    if not os.path.exists('linkedlistlog.txt'):
-    file = open('linkedlistlog.txt', 'w')
-    file.close()
-
-    #~~~~~~~~ TO CREATE A NEW FILE ENDS ~~~~~~~~~~
-
-# ------------------------------------------------------------  FORMAT - end  ----------------------------------------------------------------------------------#
-
-
-#-----for body for this fun use :-----------
-
-# ---To check a file exists or not if yes then write data into it with date that the data entered into file  
-
-if not os.path.exists('linkedlistlog.txt')
-    file = open('linkedlistlog.txt', 'w')
-    file.close()
-
-# ----------first of all we need to write into file for that: --------------#
-
-from datetime import date
-
-with open('linked_list_log.txt', 'a'):
-    print('# --log created at ',date.today(),'--\n')
-
-#---------------------------------------------------------------------------#
-
-'if os.path.exists('linked_list_log.txt'):
-    linked_list_data = self.slltolist()
-    file = open('linked_list_log.txt', 'a')
-    file.write(linked_list_data,'\n')
-    file.close()'
-    
- or
-
-'if os.path.exists('linked_list_log.txt'):
-    with open('linked_list_log.txt', 'a') as file:
-        linked_list_data = self.slltolist()
-        file.write(linked_list_data,'\n') ' 
 
 # ---
 
