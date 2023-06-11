@@ -588,7 +588,7 @@ for the FOLLOWING content we are going to create a fun :- def create_log() WITH 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# --------------------------------------------------------------WE NEED TO CREATE LOG : IN THE BELOW FORMAT ---------------------------------------------------#
+# ------------- WE NEED TO CREATE LOG : IN THE BELOW FORMAT ----------------------------#
      ---task1 (repeated task)
            -- created DATE and TIME
            -- if we are deleting data:
