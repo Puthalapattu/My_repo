@@ -180,7 +180,7 @@ class SLL:
                 print("\nDeleted node at front having data:", self.head.data, "\n")
                 # getting the list of sll
                 linked_list_now = self.slltolist()
-                # -------------------------------
+                # ----- Incrimenting the delete_count class variable ------
                 SLL.__deleted_count += 1
                 # call the create_log() method with deleted node and linked list
                 self.create_log(
@@ -188,12 +188,14 @@ class SLL:
                     linked_list=linked_list_now,
                     delete_type="Delete At Front",
                 )
-                # ---------------------------------------------------------------
+                # ---- calling create_log method ends here ----
+                # deleting the node 
                 current = self.head
                 current = current.next
                 self.head.data = None
                 self.head.next = None
                 self.head = current
+                # deleting the node ends
                 print("\nAfter 'Delete at Front' operation linked list is :\n")
                 self.display()
 
@@ -232,7 +234,7 @@ class SLL:
                     linked_list=linked_list_now,
                     delete_type="Delete At Position",
                 )
-                # ---------------------------------------------------------------
+                # ---------------------------------------------------------
 
                 current.next.data = None
                 current.next = current.next.next
@@ -295,7 +297,8 @@ class SLL:
     def gethead_and_tail(self) -> int:
         return (self.head.data, self.tail.data)
 
-    # Method to get the position of the linked list item or element with the help of item value (data part of a Node in linked list) of linked list
+    # Method to get the position of the linked list item or element with the 
+    # help of item value (data part of a Node in linked list) of linked list
     def getPosition(self, item: int) -> int or bool:
         if self.check_sll() is not True and item in self.slltolist():
             count = 1
@@ -308,7 +311,7 @@ class SLL:
                     return count
         return False
 
-    # ----------- creating a log for linked list -------------------------------------------------#
+    # ----------- creating a log for linked list ----------------------#
 
     def create_log(
         self,
@@ -319,7 +322,7 @@ class SLL:
         user_requested_log=False,
     ) -> None:
         if os.path.exists("Log_files\\linked_list_log.txt"):
-            # ------------ TASK1 : (REPEATED TASK for every delete operation) ---------------------------#
+            # ------------ TASK1 : (REPEATED TASK for every delete operation) -----------#
             # creating a new file if not exist in present working directory
 
             # opening the Linked_List_file in append mode as a file_object
@@ -353,7 +356,8 @@ class SLL:
                     )
 
                 if SLL.__deleted_calls == 0:
-                    # if __deleted_calls is 0 then that means no delete operation is performed we write data in below formatinto the file linked_list_log.txt
+                    # if __deleted_calls is 0 then that means no delete operation is performed, then we write 
+                    # data in below format into the file linked_list_log.txt
                     file_object.write(
                         "Entry @ \33 {today_date} @ TIME \33 {today_time}\n\
                 NO DELETE OPERATIONs IS PERFORMED\n\n".format(
@@ -374,7 +378,8 @@ class SLL:
 
                 # ------------ TASK2 STARTS ( when user selected exit option this will run ) ----------------------------------------#
                 if exit_selected:
-                    # whenever user selects the exit option(choice) then we write the finalized below data into the file linked_list_log.txt
+                    # whenever user selects the exit option(choice) then we write the 
+                    # finalized below data into the file linked_list_log.txt
                     file_object.write(
                         "- LINKED LIST STATUS WHEN USER SELECTED EXIT OPTION -\n\n\
                 TIME : \33 {today_time}\n\
@@ -394,10 +399,10 @@ class SLL:
                         "##################################################################################################################################################\n\n"
                     )
                 return
-            # ------------ TASK2 ENDS ----------------------------------------#
+            # ------------ TASK2 ENDS -------------------#
 
 
-# ----------- creating a logs for linked list ends --------------------------------#
+# ----------- creating a logs for linked list ends --------------#
 
 ############################# DRIVE CODE STARTS ####################################
 
@@ -547,12 +552,12 @@ while True:
     else:
         print("\ninvalid choice!\n")
 
-############################# DRIVE CODE ENDS ####################################
+################## DRIVE CODE ENDS #####################
 
-# --------------- NEW VERSION WITH LOGS OF DATA WE STORE---------------------#
+# --------------- NEW VERSION WITH LOGS---------------------#
 
 """
-~~~~~~~~~~~ WHICH MODULES WE NEED TO IMPORT ~~~~~~~~~~~~~~~~
+~~~~~~~~~~~ MODULES NEED TO BE IMPORT ~~~~~~~~~~~~~~~~
 
 import os
 from datetime import datetime, date
@@ -563,14 +568,14 @@ from datetime import datetime, date
 
        now we need to create a log file:
        firstly we need to create a file named --'Linked_List_log'--
-       check file --"linkedlistlogformat.png" FOR FORMAT
 
 ######
 
-for the FOLLOWING content we are going to create a fun :- def create_log() WITH ONE PERAMETER - 'exit_selected = None' which is defaulty set to none
+for the FOLLOWING content we are going to create a method :- 
+"create_log()" WITH ONE PERAMETER - 'exit_selected = None' which is defaulty set to none
 
 
-#### To do all these we have to maintain some values of sll
+#### To do all these we have to maintain some values of sll,
      we are going to introduce some new variables in sll class
   --
     __size_of_sll : list to keep track of size of sll
@@ -613,11 +618,4 @@ for the FOLLOWING content we are going to create a fun :- def create_log() WITH 
               -- MAX SIZE OF LINKED LIST CREATED --
     ---task2 ends
 
-# ---
-
- THE create_log() FUNCTION IS CALLED WHEN USER DELETES THE DATA FROM THE LINKED LIST: 
-
-#-------------------------------------------
-"""
-
-# --------------- NEW VERSION WITH LOGS OF DATA WE STORE---------------------#
+# --------------- NEW VERSION WITH LOGS OF DATA WE STORE---------------------#"""
