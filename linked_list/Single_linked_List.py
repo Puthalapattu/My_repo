@@ -321,6 +321,15 @@ class SLL:
         linked_list: list = None,
         user_requested_log=False,
     ) -> None:
+        # checking whether the path in my PC exists or not If not I'm creating it
+        if not os.path.exists(os.getcwd() + "\\Log_files"):
+            os.mkdir("Log_files")
+
+        # Same goes for here too I'm creating file if it's not present
+        if not os.path.exists(os.getcwd() + "\\Log_files\\linked_list_log.txt"):
+            createdFile = open("linked_list_log.txt", "w")
+            createdFile.close()
+
         if os.path.exists("Log_files\\linked_list_log.txt"):
             # ------------ TASK1 : (REPEATED TASK for every delete operation) -----------#
             # creating a new file if not exist in present working directory
