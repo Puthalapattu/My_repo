@@ -156,3 +156,25 @@ DATA ENTERED INTO THIS FILE @ DATE  2023-05-21 @ TIME  15:06:18
 
 ##################################################################################################################################################
 
+DATA ENTERED INTO THIS FILE @ DATE  2023-07-13 @ TIME  14:04:53
+
+-- DELETE OPERATION 1 --
+                TIME WHEN DELETE OPERATION PERFORMED :  14:07:04
+                DATA ##- 1 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Front -##
+                SLL BEFORE DELETING DATA :  [1, 2, 3, 4, 5]
+
+-- USER REQUESTED LOG --
+                LINKED LIST WHEN USER REQUESTED FOR LOG :  [2, 3, 4, 5]
+
+                TIME WHEN USER REQUESTED FOR A LOG TO SAVE :  14:07:31 
+
+- LINKED LIST STATUS WHEN USER SELECTED EXIT OPTION -
+
+                TIME :  14:07:50
+                LINKED LIST BEFORE SELECTING EXIT OPTION :  [2, 3, 4, 5]
+
+                TOTAL DELETE OPERATIONS PERFORMED :  1
+                MAX LENGTH OF SLL CREATED TODAY :  5
+
+##################################################################################################################################################
+

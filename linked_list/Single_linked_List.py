@@ -189,7 +189,7 @@ class SLL:
                     delete_type="Delete At Front",
                 )
                 # ---- calling create_log method ends here ----
-                # deleting the node 
+                # deleting the node
                 current = self.head
                 current = current.next
                 self.head.data = None
@@ -297,7 +297,7 @@ class SLL:
     def gethead_and_tail(self) -> int:
         return (self.head.data, self.tail.data)
 
-    # Method to get the position of the linked list item or element with the 
+    # Method to get the position of the linked list item or element with the
     # help of item value (data part of a Node in linked list) of linked list
     def getPosition(self, item: int) -> int or bool:
         if self.check_sll() is not True and item in self.slltolist():
@@ -356,7 +356,7 @@ class SLL:
                     )
 
                 if SLL.__deleted_calls == 0:
-                    # if __deleted_calls is 0 then that means no delete operation is performed, then we write 
+                    # if __deleted_calls is 0 then that means no delete operation is performed, then we write
                     # data in below format into the file linked_list_log.txt
                     file_object.write(
                         "Entry @ \33 {today_date} @ TIME \33 {today_time}\n\
@@ -378,7 +378,7 @@ class SLL:
 
                 # ------------ TASK2 STARTS ( when user selected exit option this will run ) ----------------------------------------#
                 if exit_selected:
-                    # whenever user selects the exit option(choice) then we write the 
+                    # whenever user selects the exit option(choice) then we write the
                     # finalized below data into the file linked_list_log.txt
                     file_object.write(
                         "- LINKED LIST STATUS WHEN USER SELECTED EXIT OPTION -\n\n\
