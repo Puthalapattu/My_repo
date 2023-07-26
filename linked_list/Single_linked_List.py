@@ -327,8 +327,10 @@ class SLL:
 
         # Same goes for here too I'm creating file if it's not present
         if not os.path.exists(os.getcwd() + "\\Log_files\\linked_list_log.txt"):
+            os.chdir("Log_files")
             createdFile = open("linked_list_log.txt", "w")
             createdFile.close()
+            os.chdir("../")
 
         if os.path.exists("Log_files\\linked_list_log.txt"):
             # ------------ TASK1 : (REPEATED TASK for every delete operation) -----------#
