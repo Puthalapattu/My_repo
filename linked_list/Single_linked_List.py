@@ -2,12 +2,12 @@
 # check the Log_files\Linked_List_Log.txt file for a log saving format
 """
 
-# -----imports------
+# ----------imports------------
 import os
 
 from datetime import datetime, date
 
-####################
+##############################
 
 
 class Node:
@@ -18,8 +18,10 @@ class Node:
 
 
 class SLL:
-    # defining class variables (we can use in entire program)
-    __size_of_sll = list()
+    # Defining class variables (we can use in entire program) 
+    # These are the ones that stores importent info about the working SLL
+    # And I'm using these variable values to perform certain operations and to add data into LOG file
+    __size_of_sll = 0
     __deleted_count = 0
     __deleted_calls = 0
     __original_time = str(datetime.now())[11:19]
@@ -38,7 +40,7 @@ class SLL:
 
             # UPDATING SIZE OF SLL LIST EVRY TIME A NEW ITEM ADDED
 
-            SLL.__size_of_sll.append(self.length())
+            SLL.__size_of_sll += 1
 
             # only if there is some data in linked list----------------
         else:
@@ -49,7 +51,7 @@ class SLL:
 
             # UPDATING SIZE OF SLL LIST EVRY TIME A NEW ITEM ADDED
 
-            SLL.__size_of_sll.append(self.length())
+            SLL.__size_of_sll += 1
 
             # -----------------------------------------------------
 
@@ -70,7 +72,7 @@ class SLL:
 
             # UPDATING SIZE OF SLL LIST EVRY TIME A NEW ITEM ADDED
 
-            SLL.__size_of_sll.append(self.length())
+            SLL.__size_of_sll += 1
 
             # -----------------------------------------------------
 
@@ -82,7 +84,7 @@ class SLL:
 
             # UPDATING SIZE OF SLL LIST EVRY TIME A NEW ITEM ADDED
 
-            SLL.__size_of_sll.append(self.length())
+            SLL.__size_of_sll += 1
 
             # -----------------------------------------------------
 
@@ -118,7 +120,7 @@ class SLL:
 
                 # UPDATING SIZE OF SLL LIST EVRY TIME A NEW ITEM ADDED
 
-                SLL.__size_of_sll.append(self.length())
+                SLL.__size_of_sll += 1
 
                 # -----------------------------------------------------
             elif self.length() == position:
@@ -135,13 +137,13 @@ class SLL:
 
     # Method to delete an item at the end of the linked list
     def detletAtEnd(self) -> None:
-        print("\nBefore 'Delete at End' operation linked list is :\n")
-        # Display the linked list every time brfore deleting data from the linked list
-        self.display()
         # Check if the linked list is empty or not
         if self.head.data is None:
             print("\nSLL is empty\n")
         else:
+            print("\nBefore 'Delete at End' operation linked list is :\n")
+            # Display the linked list every time brfore deleting data from the linked list
+            self.display()
             if self.length() > 1:
                 current = self.head
                 while current.next.next is not None:
@@ -169,13 +171,13 @@ class SLL:
 
     # Method to delete an item at the front of the linked list
     def deleteAtFront(self) -> None:
-        print("\nBefore 'Delete at Front' operation linked list is :\n")
-        # Display the linked list every time brfore deleting data from the linked list
-        self.display()
         # Check if the linked list is empty or not
         if self.head.data is None:
             print("\nSLL is empty\n")
         else:
+            print("\nBefore 'Delete at Front' operation linked list is :\n")
+            # Display the linked list every time brfore deleting data from the linked list
+            self.display()
             if self.length() > 1:
                 print("\nDeleted node at front having data:", self.head.data, "\n")
                 # getting the list of sll
@@ -204,13 +206,13 @@ class SLL:
 
     # Method to delete an item at the position of the linked list
     def deleteAtposition(self, position: int):
-        print("\nBefore 'Delete at Position' operation linked list is :\n")
-        # Display the linked list every time brfore deleting data from the linked list
-        self.display()
         # Check if the linked list is empty or not
         if self.head.data is None:
             print("\nSLL is empty!\n")
         else:
+            print("\nBefore 'Delete at Position' operation linked list is :\n")
+            # Display the linked list every time brfore deleting data from the linked list
+            self.display()
             current = self.head
             if position == self.length():
                 self.detletAtEnd()
@@ -262,6 +264,9 @@ class SLL:
         else:
             return self.tail.data
 
+    def boxPrinter(length: int):
+        print("+" + "-" * (length + 2) + "+")
+
     # Method to display the linked list
     def display(self) -> None:
         current = self.head
@@ -309,6 +314,8 @@ class SLL:
                     count += 1
                 else:
                     return count
+            if current.data == item:
+                return count + 1
         return False
 
     # ----------- creating a log for linked list ----------------------#
@@ -319,7 +326,7 @@ class SLL:
         deleted_data: any = None,
         delete_type: str = None,
         linked_list: list = None,
-        user_requested_log=False,
+        user_requested_log: bool = False,
     ) -> None:
         # checking whether the path in my PC exists or not If not I'm creating it
         if not os.path.exists(os.getcwd() + "\\Log_files"):
@@ -371,8 +378,11 @@ class SLL:
                     # data in below format into the file linked_list_log.txt
                     file_object.write(
                         "Entry @ \33 {today_date} @ TIME \33 {today_time}\n\
-                NO DELETE OPERATIONs IS PERFORMED\n\n".format(
-                            today_date=today_date, today_time=str(datetime.now())[11:19]
+                NO DELETE OPERATIONs IS PERFORMED\n\
+                NUMBER OF INSERTION OPERATIONS PERFORMED : \33 {insertions}\n\n".format(
+                            today_date=today_date, 
+                            today_time=str(datetime.now())[11:19],
+                            insertions=SLL.__size_of_sll,
                         )
                     )
 
@@ -381,8 +391,13 @@ class SLL:
                     file_object.write(
                         "\33-- USER REQUESTED LOG --\33\n\
                 LINKED LIST WHEN USER REQUESTED FOR LOG : \33 {linked_list_now}\n\n\
-                TIME WHEN USER REQUESTED FOR A LOG TO SAVE : \33 {time} \n\n".format(
-                            linked_list_now=linked_list, time=str(datetime.now())[11:19]
+                TIME WHEN USER REQUESTED FOR A LOG TO SAVE : \33 {time}\n\
+                NUMBER OF DELETE OPERATIONS PERFORMED UNTIL NOW : \33 {deleted}\n\
+                NUMBER OF INSERTION OPERATIONS PERFORMED UNTIL NOW : \33 {insertions}\n\n".format(
+                            linked_list_now=linked_list, 
+                            time=str(datetime.now())[11:19],
+                            deleted=SLL.__deleted_count,
+                            insertions=SLL.__size_of_sll,
                         )
                     )
                 # ------------ TASK1 ENDS ----------------------------------------#
@@ -393,16 +408,17 @@ class SLL:
                     # finalized below data into the file linked_list_log.txt
                     file_object.write(
                         "- LINKED LIST STATUS WHEN USER SELECTED EXIT OPTION -\n\n\
-                TIME : \33 {today_time}\n\
+                TIME : \33 (Start - {start} : end - {end} ) \33\n\
                 LINKED LIST BEFORE SELECTING EXIT OPTION : \33 {linked_list_now}\n\n\
                 TOTAL DELETE OPERATIONS PERFORMED : \33 {deleted_count}\n\
-                MAX LENGTH OF SLL CREATED TODAY : \33 {max_count}\n\n".format(
-                            today_time=str(datetime.now())[11:19],
+                MAX LENGTH OF SLL CREATED : \33 {max_count}\n\
+                TOTAL INSERTION OPERATIONS PERFORMED : \33 {insertion}\n\n".format(
+                            start=SLL.__original_time,
+                            end=str(datetime.now())[11:19],
                             linked_list_now=linked_list,
                             deleted_count=SLL.__deleted_count,
-                            max_count=(lambda sll: len(sll) > 0 and max(sll) or "0")(
-                                SLL.__size_of_sll
-                            ),
+                            max_count=SLL.__size_of_sll,
+                            insertion=SLL.__size_of_sll,
                         )
                     )
                     # Add a seperator so that we can easily separate logs from each other
@@ -473,12 +489,16 @@ while True:
         c.deleteAtFront()
 
     elif ch == 7:
-        try:
-            p = int(input("\nEnter the position to delete: "))
-        except:
-            print("\nEnter a proper position\n")
-            continue
-        c.deleteAtposition(p)
+        if c.check_sll():
+            try:
+                p = int(input("\nEnter the position to delete: "))
+                c.deleteAtposition(p)
+            except:
+                print("\nEnter a proper position\n")
+                continue
+        else:
+            print('\nEmpty SLL!\n')
+            
 
     elif ch == 8:
         try:
