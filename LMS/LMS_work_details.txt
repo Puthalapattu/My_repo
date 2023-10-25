@@ -1,0 +1,31 @@
+
+LMS - Library Management System
+
+
+OPERATIONS (FUNCTIONAL REQs) :
+    1 - CREATE USER
+    2 - DELETE USER
+    3 - UPDATE USER DETAILS
+    4 - UPDATE USER BOOK(S) DETAILS
+
+
+MODULES I'M USING :
+    os = 'TO CREATE AND MANAGE/MANIPULATE FILES'
+    datetime = 'TO SAVE DATE AND TIME OF USER ACTIONS'
+    pickle = 'TO SAVE USER DATA AND BOOKS DATA TO HARD DISK IN ENCRPTED FORM'
+
+
+FILES :
+    UserDetails.txt = 'STORES INFO ABOUT USER, LIKE : NAME, ADDRESS, NO.OF BOOKS USING
+                       NO.OF BOOKS USED, BOOKs ISSUED DATE, FINE FEE, BOOK SUBMIT TIME EXTENTION(RENUAL)
+                       AND I'LL ADD IF ANYTHINGS COME INTO MY MIND.'
+
+    BookDetails.txt = 'STORES THE INFO ABOUT THE BOOKS LIKE : BOOKNAME, BOOKNO(PRIMARY), BOOKAUTHOR,
+                       NO.OF TIMES BOOK USED'
+
+
+KEEP IN CHECKS : 
+    1 - Everytime when I perform user data or book data related operations I need to update the
+    data accordingly so that I will have the up to date data for future purposes.
+
+    For now this is it may be I'll add new ones in future.
