@@ -18,7 +18,7 @@ class Node:
 
 
 class SLL:
-    # Defining class variables (we can use in entire program) 
+    # Defining class variables (we can use in entire program)
     # These are the ones that stores importent info about the working SLL
     # And I'm using these variable values to perform certain operations and to add data into LOG file
     __size_of_sll = 0
@@ -328,6 +328,10 @@ class SLL:
         linked_list: list = None,
         user_requested_log: bool = False,
     ) -> None:
+        # need to change directory cause I mooved all directories and files to a new directory.
+        if os.getcwd().split("\\")[-1] != "Linked List":
+            os.chdir("Linked List")
+
         # checking whether the path in my PC exists or not If not I'm creating it
         if not os.path.exists(os.getcwd() + "\\Log_files"):
             os.mkdir("Log_files")
@@ -380,7 +384,7 @@ class SLL:
                         "Entry @ \33 {today_date} @ TIME \33 {today_time}\n\
                 NO DELETE OPERATIONs IS PERFORMED\n\
                 NUMBER OF INSERTION OPERATIONS PERFORMED : \33 {insertions}\n\n".format(
-                            today_date=today_date, 
+                            today_date=today_date,
                             today_time=str(datetime.now())[11:19],
                             insertions=SLL.__size_of_sll,
                         )
@@ -394,7 +398,7 @@ class SLL:
                 TIME WHEN USER REQUESTED FOR A LOG TO SAVE : \33 {time}\n\
                 NUMBER OF DELETE OPERATIONS PERFORMED UNTIL NOW : \33 {deleted}\n\
                 NUMBER OF INSERTION OPERATIONS PERFORMED UNTIL NOW : \33 {insertions}\n\n".format(
-                            linked_list_now=linked_list, 
+                            linked_list_now=linked_list,
                             time=str(datetime.now())[11:19],
                             deleted=SLL.__deleted_count,
                             insertions=SLL.__size_of_sll,
@@ -489,7 +493,7 @@ while True:
         c.deleteAtFront()
 
     elif ch == 7:
-        if c.check_sll():
+        if not c.check_sll():
             try:
                 p = int(input("\nEnter the position to delete: "))
                 c.deleteAtposition(p)
@@ -497,8 +501,7 @@ while True:
                 print("\nEnter a proper position\n")
                 continue
         else:
-            print('\nEmpty SLL!\n')
-            
+            print("\nEmpty SLL!\n")
 
     elif ch == 8:
         try:

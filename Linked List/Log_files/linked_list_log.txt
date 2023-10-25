@@ -205,3 +205,38 @@ DATA ENTERED INTO THIS FILE @ DATE  2023-07-13 @ TIME  20:11:57
 
 ##################################################################################################################################################
 
+DATA ENTERED INTO THIS FILE @ DATE  2023-10-25 @ TIME  15:36:11
+
+-- DELETE OPERATION 1 --
+                TIME WHEN DELETE OPERATION PERFORMED :  15:36:20
+                DATA ##- 7 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At End -##
+                SLL BEFORE DELETING DATA :  [1, 2, 3, 4, 5, 6, 7]
+
+-- DELETE OPERATION 2 --
+                TIME WHEN DELETE OPERATION PERFORMED :  15:36:21
+                DATA ##- 1 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Front -##
+                SLL BEFORE DELETING DATA :  [1, 2, 3, 4, 5, 6]
+
+-- DELETE OPERATION 3 --
+                TIME WHEN DELETE OPERATION PERFORMED :  15:36:23
+                DATA ##- 3 -## DELETED FROM SLL WITH DELETE TYPE ##- Delete At Position -##
+                SLL BEFORE DELETING DATA :  [2, 3, 4, 5, 6]
+
+-- USER REQUESTED LOG --
+                LINKED LIST WHEN USER REQUESTED FOR LOG :  [2, 4, 5, 6]
+
+                TIME WHEN USER REQUESTED FOR A LOG TO SAVE :  15:36:26
+                NUMBER OF DELETE OPERATIONS PERFORMED UNTIL NOW :  3
+                NUMBER OF INSERTION OPERATIONS PERFORMED UNTIL NOW :  7
+
+- LINKED LIST STATUS WHEN USER SELECTED EXIT OPTION -
+
+                TIME :  (Start - 15:36:11 : end - 15:36:27 ) 
+                LINKED LIST BEFORE SELECTING EXIT OPTION :  [2, 4, 5, 6]
+
+                TOTAL DELETE OPERATIONS PERFORMED :  3
+                MAX LENGTH OF SLL CREATED :  7
+                TOTAL INSERTION OPERATIONS PERFORMED :  7
+
+##################################################################################################################################################
+
