@@ -28,4 +28,6 @@ KEEP IN CHECKS :
     1 - Everytime when I perform user data or book data related operations I need to update the
     data accordingly so that I will have the up to date data for future purposes.
 
+    2 - I'm gonna use dictionaries to work with user and book data.
+
     For now this is it may be I'll add new ones in future.
