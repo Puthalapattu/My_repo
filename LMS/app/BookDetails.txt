@@ -1,1 +1,2 @@
-120:{'bookName' :'someName', 'bookAuthour' :'someName', 'timesUsed':12}
+120: {'bookName' :'someName', 'bookAuthour' :'someName'}
+123: {'name': 'self', 'author': 'deep'}
