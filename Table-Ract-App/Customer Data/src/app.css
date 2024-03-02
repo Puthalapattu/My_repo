@@ -5,21 +5,23 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.preact:hover {
-  filter: drop-shadow(0 0 2em #673ab8aa);
+body {
+  place-content: center;
 }
 
-.card {
-  padding: 2em;
+input {
+  color: black;
+  width: 100%;
+  background: white;
+  border: 5px solid black;
+  border-radius: 7px;
 }
 
-.read-the-docs {
-  color: #888;
+th:hover {
+  cursor: pointer;
+}
+
+.page {
+  display: inline-flex;
+  gap: 50px;
 }
