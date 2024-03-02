@@ -37,42 +37,6 @@ function App() {
       accessorKey: "time",
     },
   ];
-  const columns = [
-    {
-      header: "ID",
-      accessorKey: "id",
-      footer: "ID",
-    },
-    {
-      header: "Name",
-      accessorKey: "first_name",
-    },
-    {
-      header: "First name",
-      accessorKey: "first_name",
-      footer: "First name",
-    },
-    {
-      header: "Last name",
-      accessorKey: "last_name",
-      footer: "Last name",
-    },
-    {
-      header: "Email",
-      accessorKey: "email",
-      footer: "Email",
-    },
-    {
-      header: "Gender",
-      accessorKey: "gender",
-      footer: "Gender",
-    },
-    {
-      header: "Date of birth",
-      accessorKey: "dob",
-      footer: "Date of birth",
-    },
-  ];
 
   return (
     <>

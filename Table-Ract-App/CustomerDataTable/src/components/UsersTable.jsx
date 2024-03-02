@@ -20,6 +20,7 @@ function BasicTable({ data, columns }) {
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
+    // setPageSize: 20,
     state: {
       sorting: sorting,
       globalFilter: search,
@@ -27,8 +28,9 @@ function BasicTable({ data, columns }) {
     onSortingChange: setSorting,
     onGlobalFilterChange: setSearch,
   });
-  console.log("table state:", table.pageSize); // Inspect state values, including pageSize
-  console.log("data length:", data.length);
+
+  //   console.log("table state:", table.pageSize);
+  //   console.log("data length:", data.length);
 
   return (
     <div className="container">
@@ -98,6 +100,19 @@ function BasicTable({ data, columns }) {
         <button onClick={() => table.setPageIndex(table.getPageCount() - 1)}>
           Last page
         </button>
+        <select
+          value={table.options.state.pagination.pageSize}
+          onChange={(e) => table.setPageSize(e.target.value)}
+        >
+          Select Page Size
+          {[10, 20].map((pageSizeEl) => {
+            return (
+              <option key={pageSizeEl} value={pageSizeEl}>
+                {pageSizeEl}
+              </option>
+            );
+          })}
+        </select>
       </div>
     </div>
   );
