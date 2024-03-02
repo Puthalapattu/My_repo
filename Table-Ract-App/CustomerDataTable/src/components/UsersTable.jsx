@@ -8,6 +8,7 @@ import {
 } from "@tanstack/react-table";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import "../app.css";
 
 function BasicTable({ data, columns }) {
   const [sorting, setSorting] = useState([]);
@@ -103,9 +104,9 @@ function BasicTable({ data, columns }) {
         <select
           value={table.options.state.pagination.pageSize}
           onChange={(e) => table.setPageSize(e.target.value)}
+          placeholder="Select page Size"
         >
-          Select Page Size
-          {[10, 20].map((pageSizeEl) => {
+          {[20, 10].map((pageSizeEl) => {
             return (
               <option key={pageSizeEl} value={pageSizeEl}>
                 {pageSizeEl}

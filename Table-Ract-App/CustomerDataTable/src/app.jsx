@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import "./app.css";
-import movies from "./DummyData.json";
+import dumData from "./DummyData.json";
 import BasicTable from "./components/UsersTable";
 
 function App() {
-  const data = useMemo(() => movies, []);
+  const data = useMemo(() => dumData, []);
 
   /** @type import('@tanstack/react-table').ColumnDef<any> */
   const dataColumns = [
