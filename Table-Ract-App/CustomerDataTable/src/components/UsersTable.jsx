@@ -60,7 +60,7 @@ function BasicTable({ data, columns }) {
                         header.getContext()
                       )}
                       {
-                        { asc: "🔼", desc: "🔽" }[
+                        { asc: "🔽", desc: "🔼" }[
                           header.column.getIsSorted() ?? null
                         ]
                       }
@@ -106,7 +106,7 @@ function BasicTable({ data, columns }) {
           onChange={(e) => table.setPageSize(e.target.value)}
           placeholder="Select page Size"
         >
-          {[20, 10].map((pageSizeEl) => {
+          {[20, 15, 10].map((pageSizeEl) => {
             return (
               <option key={pageSizeEl} value={pageSizeEl}>
                 {pageSizeEl}

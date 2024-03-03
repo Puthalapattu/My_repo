@@ -13,7 +13,7 @@ function App() {
       accessorKey: "sno",
     },
     {
-      header: "Name",
+      header: "Customer Name",
       accessorKey: "name",
     },
     {
