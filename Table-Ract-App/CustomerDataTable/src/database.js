@@ -10,18 +10,19 @@ const client = new Client({
   database: "postgres",
 });
 
-// const UserData = "";
+let UserData = "";
 
 client.connect();
 
 client.query(`SELECT * FROM Users`, (err, res) => {
   if (!err) {
     console.log(res.rows);
-    // UserData = res.rows;
+    UserData = res.rows;
+    console.log("assignment Complete");
   } else {
     console.log("Error:" + err.message);
   }
   client.end;
 });
 
-export default UserData = res.rows;
+export default UserData;

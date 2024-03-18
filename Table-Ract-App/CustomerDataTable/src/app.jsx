@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import "./app.css";
 import dumData from "./DummyData.json";
 import BasicTable from "./components/UsersTable";
+// import UserData from "./database";
 
 function App() {
   const data = useMemo(() => dumData, []);
