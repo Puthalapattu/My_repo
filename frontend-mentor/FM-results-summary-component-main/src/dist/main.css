@@ -64,6 +64,16 @@ main {
   --dark-gray-blue-200: hsl(224, 5%, 40%);
   --light-lavender-5: hsla(241, 100%, 89%, 0.5);
   --light-lavender-8: hsla(241, 100%, 89%, 0.8);
+
+  --light-red-500: hsla(0, 100%, 67%, 1);
+  --orangey-yellow-500: hsla(39, 100%, 56%, 1);
+  --green-teal-500: hsla(166, 100%, 37%, 1);
+  --cobalt-blue-500: hsla(234, 85%, 45%, 1);
+
+  --light-red: hsla(0, 100%, 67%, 0.05);
+  --orangey-yellow: hsla(39, 100%, 56%, 0.05);
+  --green-teal: hsla(166, 100%, 37%, 0.05);
+  --cobalt-blue: hsla(234, 85%, 45%, 0.05);
 }
 
 .card {
@@ -141,21 +151,6 @@ p {
   font-size: 2rem;
 }
 
-:root {
-  --light-red-500: hsla(0, 100%, 67%, 1);
-  --orangey-yellow-500: hsla(39, 100%, 56%, 1);
-  --green-teal-500: hsla(166, 100%, 37%, 1);
-  --cobalt-blue-500: hsla(234, 85%, 45%, 1);
-  --light-red: hsla(0, 100%, 67%, 0.05);
-  --orangey-yellow: hsla(39, 100%, 56%, 0.05);
-  --green-teal: hsla(166, 100%, 37%, 0.05);
-  --cobalt-blue: hsla(234, 85%, 45%, 0.05);
-  --dark-gray-blue-200: hsl(210, 2%, 53%);
-  --dark-gray-blue-500: hsl(224, 30%, 27%);
-  --light-state-blue: hsl(252, 100%, 67%);
-  --light-royal-blue: hsl(241, 81%, 54%);
-}
-
 .summary-card {
   justify-content: space-between;
 }
@@ -198,10 +193,7 @@ p {
   transition: none;
 }
 .summary-card .btn-pri:hover {
-  --btn-clr: linear-gradient(
-    var(--light-state-blue),
-    var(--light-royal-blue)
-  );
+  --btn-clr: linear-gradient(var(--light-state-blue), var(--light-royal-blue));
 }
 
 .memory {
@@ -252,4 +244,4 @@ p {
     font-size: 1.7rem;
   }
 }
-/* -------------------- *//*# sourceMappingURL=main.css.map */
+/* -------------------- */ /*# sourceMappingURL=main.css.map */
