@@ -53,6 +53,10 @@ main {
   gap: 0.5rem;
 }
 
+gap-2 {
+  gap: 1rem;
+}
+
 :root {
   --light-state-blue: hsl(252, 100%, 67%);
   --light-royal-blue: hsl(241, 81%, 54%);
